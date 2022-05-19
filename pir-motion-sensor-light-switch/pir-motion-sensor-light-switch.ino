@@ -16,8 +16,8 @@ void loop() {
 
 void lightON(){
 digitalWrite(relay, HIGH);
-for(int i =0l i <= 3000; i++){
-  delay(1000);
+for(int i =0; i <= 3000; i++){
+  delay(100);
 }
 digitalWrite(relay, LOW);
 }
