@@ -18,6 +18,7 @@ void loop() {
   
   temp = analogRead(tempPin);
   temp = (temp/1024.0) * 5000;
+  temp = temp/10;
   char myStringe[64]= {' '};
 
   int val_int = (int) temp;   // compute the integer part of the float
@@ -35,6 +36,11 @@ void loop() {
   // LCD
   lcd.clear();
   lcd.setCursor(0,0); 
+  lcd.print("DGT THERMOMETER");
+    lcd.setCursor(0,1); 
+  lcd.print("TEMP=");
+    lcd.setCursor(6,1); 
+
   lcd.print(myStringe); 
   lcd.print("C");
   delay(1000);
